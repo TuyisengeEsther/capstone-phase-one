@@ -7,7 +7,7 @@ const container = document.getElementById("booksContainer");
 const loading = document.getElementById("loading");
 const noResults = document.getElementById("noResults");
 
-/* ================= DARK MODE (FIXED CLEAN) ================= */
+
 const body = document.getElementById("appBody");
 const header = document.getElementById("appHeader");
 const themeToggle = document.getElementById("themeToggle");
@@ -18,33 +18,33 @@ themeToggle.addEventListener("click", () => {
   dark = !dark;
 
   if (dark) {
-    // BODY
+    
     body.classList.add("bg-black", "text-white");
     body.classList.remove("bg-white", "text-black");
 
-    // HEADER
+   
     header.classList.add("bg-zinc-900", "text-white", "border-zinc-800");
     header.classList.remove("bg-white", "text-black", "border-gray-300");
   } 
   else {
-    // BODY
+    
     body.classList.add("bg-white", "text-black");
     body.classList.remove("bg-black", "text-white");
 
-    // HEADER
+    
     header.classList.add("bg-white", "text-black", "border-gray-300");
     header.classList.remove("bg-zinc-900", "text-white", "border-zinc-800");
   }
 });
 
-/* ================= FETCH BOOKS ================= */
+
 async function fetchBooks(query) {
   const res = await fetch(`https://openlibrary.org/search.json?q=${query}`);
   const data = await res.json();
   return data.docs.slice(0, 12);
 }
 
-/* ================= DISPLAY BOOKS ================= */
+
 function displayBooks(books) {
   container.innerHTML = "";
 
@@ -85,7 +85,7 @@ function displayBooks(books) {
   });
 }
 
-/* ================= LOAD ================= */
+
 async function load(query = "javascript") {
   loading.classList.remove("hidden");
 
@@ -102,12 +102,12 @@ async function load(query = "javascript") {
   displayBooks(books);
 }
 
-/* ================= SEARCH ================= */
+
 btn.onclick = () => load(input.value);
 
 input.addEventListener("keypress", e => {
   if (e.key === "Enter") load(input.value);
 });
 
-/* ================= INIT ================= */
+
 load();

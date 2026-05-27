@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Book Explorer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body id="appBody" class="bg-black text-white min-h-screen flex flex-col">
+
+<!-- HEADER -->
+<header id="appHeader" class="bg-zinc-900 border-b border-zinc-800 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <h1 class="text-xl font-bold">📚 Book Explorer</h1>
+
+    <nav class="hidden md:flex gap-6">
+      <a href="index.html" class="hover:text-gray-400">Home</a>
+      <a href="favorite.html" class="hover:text-gray-400">Favorite</a>
+      <a href="about.html" class="hover:text-gray-400">About</a>
+    </nav>
+
+    <div class="flex gap-4 items-center">
+      <button id="themeToggle" class="text-xl">🌙</button>
+      <button id="menuBtn" class="md:hidden text-3xl">☰</button>
+    </div>
+
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="hidden md:hidden bg-zinc-950 px-6 py-4 flex flex-col gap-4">
+    <a href="index.html">Home</a>
+    <a href="favorite.html">Favorite</a>
+    <a href="about.html">About</a>
+  </div>
+</header>
+
+<!-- TESTIMONIALS -->
+<section class="max-w-7xl mx-auto px-6 pb-20">
+  <h2 class="text-3xl font-bold text-center mb-10">
+    💬 What People Say About Reading
+  </h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+    <!-- CARD 1 -->
+    <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-xl">
+      <p class="text-gray-300 italic mb-4">
+        "Reading books changed the way I think. It helps me grow every day."
+      </p>
+      <h4 class="font-semibold">— Sarah M.</h4>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-xl">
+      <p class="text-gray-300 italic mb-4">
+        "Books are the best way to gain knowledge without limits."
+      </p>
+      <h4 class="font-semibold">— James K.</h4>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-xl">
+      <p class="text-gray-300 italic mb-4">
+        "I started reading daily and my focus and creativity improved a lot."
+      </p>
+      <h4 class="font-semibold">— Aline U.</h4>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-zinc-900 text-center py-6 text-gray-400 mt-auto">
+  © 2026 Book Explorer | Built with HTML, Tailwind & JavaScript
+</footer>
+
+
+<script type="module" src="javascript/menu.js"></script>
+<!-- <script type="module" src="javascript/app.js"></script> -->
+
+</body>
+</html>
